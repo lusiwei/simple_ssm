@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--让SpringMvc作为默认的servlet处理器-->
+    <mvc:default-servlet-handler/>
+    <!--让SpringMvc使用注解驱动，即可用RequestMapping之类的注解-->
+    <mvc:annotation-driven/>
+
+    <!--扫描SpringMvc的java文件的基础包名-->
+    <context:component-scan base-package="com.lusiwei"/>
+</beans>
